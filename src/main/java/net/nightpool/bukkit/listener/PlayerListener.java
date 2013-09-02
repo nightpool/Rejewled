@@ -1,6 +1,7 @@
-package com.minecarts.familyjewels.listener;
+package net.nightpool.bukkit.listener;
 
-import com.minecarts.familyjewels.FamilyJewels;
+import net.nightpool.bukkit.RejewledPlugin;
+
 import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -9,8 +10,8 @@ import org.bukkit.event.player.PlayerJoinEvent;
 import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerListener implements Listener {
-    private FamilyJewels plugin;
-    public PlayerListener(FamilyJewels plugin){
+    private RejewledPlugin plugin;
+    public PlayerListener(RejewledPlugin plugin){
         this.plugin = plugin;
     }
 
@@ -21,14 +22,15 @@ public class PlayerListener implements Listener {
         //  so we can't correctly remove it until the next tick. Possibly another event would be better, but didn't look
         //  into which one
         Bukkit.getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
-            public void run() {
-                plugin.hookNSH(e.getPlayer());
+            @Override
+			public void run() {
+                plugin.hook(e.getPlayer());
             }
         },1);
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
     public void onPlayerQuit(final PlayerQuitEvent e){
-        plugin.unhookNSH((e.getPlayer()));
+        plugin.unhook((e.getPlayer()));
     }
 }

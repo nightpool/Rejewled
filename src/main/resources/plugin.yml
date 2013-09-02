@@ -1,0 +1,5 @@
+name: Rejeweled
+version: maven-version-number
+author: Nightpool
+description: A rewrite of the FamilyJewels anti-xray project from the ground up, to support 1.6.2 and beyond.
+main: net.nightpool.bukkit.RejewledPlugin
