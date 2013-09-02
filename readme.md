@@ -15,9 +15,9 @@ Whenever a player punches or breaks a block, the plugin will then update the cli
 ##Issues and Feedback##
 Please report all issues and feedback with Rejewled in the Github issue tracker, on the right sidebar. 
 
-Please keep in mind that this is not a pure Bukkit plugin and this will only work on pure CraftBukkit servers. In addition, because of protections built into CraftBukkit, you must always update this plugin after a patch. Versions built for older CB versions **will not run**. Since this plugin hooks into the internals of CraftBukkit, there is always the possibility of world corruption or otherwise weird behavior. Use this plugin on a test server before deploying it to a production enviroment.
+Please keep in mind that this is not a pure Bukkit plugin and this will only work on pure CraftBukkit servers. In addition, because of protections built into CraftBukkit, you must always update this plugin after a patch. Versions built for older CB versions **will not run**. Since this plugin hooks into the internals of CraftBukkit, there is always the possibility of world corruption or otherwise weird behavior. Use this plugin on a test server before deploying it to a production environment.
 
-While we personally have been running this plugin for many months, we cannot guarntee that it won't break your world. Please make backups.
+While I've tested this plugin breifly, I can not possibly attempt to recreate all the situations you guys could put it though. Therefore, I cannot guarantee that it won't break your world. *Please* make backups.
 
 ##Building##
 Building this plugin requires downloading and building CraftBukkit seperately, after slightly modifying its pom file. This is ONLY a requirement for building the plugin, the plugin **will** run on stock CraftBukkit.
