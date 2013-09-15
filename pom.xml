@@ -14,7 +14,7 @@
 		</repository>
 	</repositories>
 	<properties>
-		<project.mcversion>v1_6_R2</project.mcversion>
+		<project.mcversion>1_6_R2</project.mcversion>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -22,12 +22,12 @@
 		<dependency>
 			<artifactId>bukkit</artifactId>
 			<groupId>org.bukkit</groupId>
-			<version>1.6.2-R0.2-SNAPSHOT</version>
+			<version>1.6.2-R1.1-SNAPSHOT</version>
 		</dependency>
 		<dependency>
 			<artifactId>craftbukkit-nr</artifactId>
 			<groupId>org.bukkit</groupId>
-			<version>1.6.2-R0.2-SNAPSHOT</version>
+			<version>1.6.2-R1.1-SNAPSHOT</version>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
@@ -52,16 +52,16 @@
 								<!-- CraftBukkit compat -->
 								<relocation>
 									<pattern>org.bukkit.craftbukkit</pattern>
-									<shadedPattern>org.bukkit.craftbukkit.${project.mcversion}</shadedPattern>
+									<shadedPattern>org.bukkit.craftbukkit.v${project.mcversion}</shadedPattern>
 									<excludes>
-										<exclude>org.bukkit.craftbukkit.${project.mcversion}.**.*</exclude>
+										<exclude>org.bukkit.craftbukkit.v${project.mcversion}.**.*</exclude>
 									</excludes>
 								</relocation>
 								<relocation>
 									<pattern>net.minecraft.server</pattern>
-									<shadedPattern>net.minecraft.server.${project.mcversion}</shadedPattern>
+									<shadedPattern>net.minecraft.server.v${project.mcversion}</shadedPattern>
 									<excludes>
-										<exclude>net.minecraft.server.${project.mcversion}.**.*</exclude>
+										<exclude>net.minecraft.server.v${project.mcversion}.**.*</exclude>
 									</excludes>
 								</relocation>
 							</relocations>
