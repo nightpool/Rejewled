@@ -21,12 +21,12 @@ public class PlayerListener implements Listener {
         //  We have to do it 1 tick later becuase the NSH is set in NetworkListenThread AFTER the player join event
         //  so we can't correctly remove it until the next tick. Possibly another event would be better, but didn't look
         //  into which one
-        Bukkit.getScheduler().scheduleSyncDelayedTask(plugin,new Runnable() {
+        Bukkit.getScheduler().runTask(plugin,new Runnable() {
             @Override
-			public void run() {
+            public void run() {
                 plugin.hook(e.getPlayer());
             }
-        },1);
+        });
     }
 
     @EventHandler(priority = EventPriority.MONITOR)
